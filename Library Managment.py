@@ -61,8 +61,26 @@ def library (borrowed_book):
                         print("Cancelling...")
             else:
                 print("The entered book is not in our library collection.")
-borrowed_book = []
-library(borrowed_book)
+        elif pick == '3':
+            print(f"{borrowed_book} have been borrowed")
+            return_book = input("Enter the book you want to Return: ")
+            if return_book in Books:
+                print(f"Are you sure you want to return {return_book} by {Books[return_book]}? (Yes/No): ")
+                y_or_no = input("Enter your choice: ")
+                if y_or_no == 'yes':
+                    borrowed_book.remove(return_book)
+                    print(f"The book {return_book} by {Books[return_book]} has been returned by you")
+                else:
+                    print("Cancelling")
+            else:
+                print("the entered book is not borrowed form the library or does not exist ")
+        
+
+
+
+borrowed_id =[]
+library(borrowed_id)
+                    
 
         
         
